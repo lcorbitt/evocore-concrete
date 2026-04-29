@@ -1,0 +1,7 @@
+export const VALUE_PRIMARY_LINE =
+  "QUALITY WORK. HONEST SERVICE. STRONG RESULTS." as const;
+
+export const VALUE_DIRECT_LEAD = "DIRECT COMMUNICATION." as const;
+export const VALUE_DIRECT_REST = " NO MIDDLEMEN. NO SURPRISES." as const;
+
+export const SECTION_TITLE = "WHY EVOCORE" as const;
