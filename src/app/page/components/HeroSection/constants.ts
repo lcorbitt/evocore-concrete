@@ -3,7 +3,7 @@ export const HERO_HEADLINE = "DENVER, COLORADO'S #1"
 export const HERO_HEADLINE_SECONDARY = "CONCRETE & FENCING TEAM";
 
 export const HERO_IMAGE = {
-  src: "/ec-hero-2.jpg",
+  src: "/ec-hero.jpg",
   alt: "Professional worker hand-finishing a concrete surface with a trowel on a job site.",
 } as const;
 
