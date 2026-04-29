@@ -20,10 +20,10 @@ export const ANIMATED_UNDERSCORE_LASER_BAR_CLASS =
   `pointer-events-none absolute inset-x-0 top-1/2 z-[1] h-[2px] w-full -translate-y-1/2 rounded-full blur-[4px] ${MASK_FEATHER}`;
 
 export const ANIMATED_UNDERSCORE_LASER_BAR_GRADIENT =
-  "linear-gradient(90deg, rgba(255,0,0,0) 0%, rgba(220,0,0,0.08) 12%, rgba(220,0,0,0.45) 24%, rgba(255,30,30,1) 50%, rgba(220,0,0,0.45) 76%, rgba(220,0,0,0.08) 88%, rgba(255,0,0,0) 100%)";
+  "linear-gradient(90deg, rgba(255,0,0,0) 0%, rgba(255,0,0,0.22) 8%, rgba(255,0,0,0.78) 18%, rgba(255,35,35,1) 42%, rgb(255,0,0) 50%, rgba(255,35,35,1) 58%, rgba(255,0,0,0.78) 82%, rgba(255,0,0,0.22) 92%, rgba(255,0,0,0) 100%)";
 
 export const ANIMATED_UNDERSCORE_LASER_BAR_SHADOW =
-  "0 0 10px rgba(255,60,60,0.95), 0 0 22px rgba(255,25,25,0.75), 0 0 40px rgba(255,0,0,0.5)";
+  "0 0 6px rgba(255,100,100,1), 0 0 16px rgba(255,50,50,0.98), 0 0 28px rgba(255,0,0,0.9), 0 0 52px rgba(255,0,0,0.65)";
 
 /**
  * Same mask + height/blur as bar; gradient fades the crawl’s own ends softly.
