@@ -17,7 +17,7 @@ import { StarIcon } from "lucide-react";
 export const HeroSection = () => (
   <header id={heroSectionId} className="relative border-b border-evocore-gray/80">
     <div
-      className="relative flex min-h-[min(420px,82svh)] w-full flex-col items-center justify-center px-4 py-16 sm:min-h-[min(520px,85svh)] sm:px-6 sm:py-20 lg:min-h-[70vh]"
+      className="relative flex min-h-[min(420px,82svh)] w-full flex-col items-center justify-center px-4 py-12 sm:min-h-[min(520px,85svh)] sm:px-6 sm:py-20 lg:min-h-[70vh]"
       style={
         {
           "--hero-object-desktop": HERO_IMAGE_OBJECT_POSITION,
@@ -44,7 +44,7 @@ export const HeroSection = () => (
       <div className="relative z-10 mx-auto flex w-full min-w-0 max-w-6xl flex-col items-center gap-6 text-center">
         <div className="flex items-center gap-1 bg-evocore-red/15 p-2 border border-evocore-red/30">
           <StarIcon strokeWidth={1.25} aria-hidden className="size-2 text-evocore-white" />
-          <p className="font-montserrat text-[8px] font-extrabold tracking-[0.1rem] uppercase text-evocore-white">
+          <p className="font-montserrat text-[8px] font-extrabold tracking-[0.1rem] uppercase text-evocore-white/80">
             {"Colorado's Most Trusted"}
           </p>
           <StarIcon strokeWidth={1.25} aria-hidden className="size-2 text-evocore-white" />

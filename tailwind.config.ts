@@ -52,8 +52,12 @@ const config = {
       },
       keyframes: {
         "hero-headline-sheen": {
-          "0%, 100%": { transform: "translate3d(-130%, -50%, 0)" },
-          "50%": { transform: "translate3d(320%, -50%, 0)" },
+          "0%, 100%": {
+            transform: "translate3d(calc(-50% - 38%), -50%, 0)",
+          },
+          "50%": {
+            transform: "translate3d(calc(-50% + 38%), -50%, 0)",
+          },
         },
       },
       animation: {

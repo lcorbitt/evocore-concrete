@@ -1,5 +1,5 @@
 export const ANIMATED_UNDERSCORE_WRAPPER_CLASS =
-  "relative mx-auto w-full max-w-56 min-w-0 opacity-100 sm:mt-6 sm:max-w-72";
+  "relative mx-auto w-full max-w-64 min-w-0 opacity-100 sm:mt-6 sm:max-w-72";
 
 /** Clips horizontal motion/bleed; vertical padding for blur. */
 export const ANIMATED_UNDERSCORE_CLIP_CLASS =
@@ -25,9 +25,12 @@ export const ANIMATED_UNDERSCORE_LASER_BAR_GRADIENT =
 export const ANIMATED_UNDERSCORE_LASER_BAR_SHADOW =
   "0 0 10px rgba(255,60,60,0.95), 0 0 22px rgba(255,25,25,0.75), 0 0 40px rgba(255,0,0,0.5)";
 
-/** Same mask + height/blur as bar; gradient fades the crawl’s own ends softly. */
+/**
+ * Same mask + height/blur as bar; gradient fades the crawl’s own ends softly.
+ * `left-1/2` + symmetric keyframes (`calc(-50% ± …)`) keep motion equal left/right of center.
+ */
 export const ANIMATED_UNDERSCORE_HOT_CRAWL_CLASS =
-  `pointer-events-none absolute left-0 top-1/2 z-[2] h-[2px] w-[34%] max-w-[5.25rem] rounded-full blur-[4px] ${MASK_FEATHER} motion-safe:animate-hero-headline-sheen [box-shadow:0_0_12px_rgba(255,255,255,0.55),0_0_22px_rgba(255,160,160,0.45)]`;
+  `pointer-events-none absolute left-1/2 top-1/2 z-[2] h-[2px] w-[34%] max-w-[5.25rem] rounded-full blur-[4px] ${MASK_FEATHER} motion-safe:animate-hero-headline-sheen [box-shadow:0_0_12px_rgba(255,255,255,0.55),0_0_22px_rgba(255,160,160,0.45)]`;
 
 export const ANIMATED_UNDERSCORE_HOT_CRAWL_GRADIENT =
   "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0.55) 32%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.55) 68%, rgba(255,255,255,0) 90%, rgba(255,255,255,0) 100%)";
