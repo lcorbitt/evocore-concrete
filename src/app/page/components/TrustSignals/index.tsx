@@ -7,7 +7,7 @@ export const TrustSignals = () => (
   <section
     id={trustSectionId}
     aria-labelledby={`${trustSectionId}-heading`}
-    className="border-b border-evocore-grey/70 py-12 sm:py-14"
+    className="border-b border-evocore-gray/70 py-12 sm:py-14"
   >
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div className="relative overflow-hidden border-2 border-evocore-red bg-evocore-steel/95 px-6 py-10 sm:px-10">

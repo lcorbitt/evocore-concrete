@@ -7,7 +7,7 @@ export const ServicesSection = () => (
   <section
     id={servicesSectionId}
     aria-labelledby={`${servicesSectionId}-heading`}
-    className="border-b border-evocore-grey/70 bg-evocore-black/40 py-16 sm:py-20"
+    className="border-b border-evocore-gray/70 bg-evocore-black/40 py-16 sm:py-20"
   >
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <h2
@@ -21,7 +21,7 @@ export const ServicesSection = () => (
         {SERVICE_CARDS.map(({ title, Icon }) => (
           <li
             key={title}
-            className="flex flex-col items-center border border-evocore-grey/70 bg-evocore-steel/60 px-4 py-8 text-center"
+            className="flex flex-col items-center border border-evocore-gray/70 bg-evocore-steel/60 px-4 py-8 text-center"
           >
             <Icon
               className="mb-5 size-12 text-evocore-red"

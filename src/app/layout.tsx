@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 const arialNova = localFont({
   src: [
@@ -96,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arialNova.variable} ${industry.variable} ${microgramma.variable} h-full`}
+      className={`${arialNova.variable} ${industry.variable} ${microgramma.variable} ${montserrat.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

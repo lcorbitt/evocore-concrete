@@ -26,7 +26,7 @@ export const ContactSection = () => (
           return (
             <li
               key={channel.id}
-              className="border border-evocore-grey/70 bg-evocore-steel/70 p-6"
+              className="border border-evocore-gray/70 bg-evocore-steel/70 p-6"
             >
               <div className="flex items-start gap-4">
                 <Icon className="mt-0.5 size-6 shrink-0 text-evocore-red" strokeWidth={1.35} aria-hidden />

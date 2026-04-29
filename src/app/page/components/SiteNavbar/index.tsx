@@ -5,9 +5,7 @@ import { cn } from "@/lib/utils";
 
 import { MobileNav } from "../MobileNav";
 import {
-  COMPANY_NAME,
   SITE_NAV_BRAND_MARK_ARIA_LABEL,
-  SITE_NAV_LOCATION_LINE,
   SITE_NAV_QUOTE_CTA_LABEL,
   SITE_NAV_QUOTE_HREF,
   SITE_NAVBAR_INNER_CLASS,
@@ -54,13 +52,14 @@ export const SiteNavbar = () => (
     <div className={SITE_NAVBAR_INNER_CLASS}>
       <div className="flex items-center gap-3">
         <EvocoreBrandMark className="h-12 w-12 shrink-0 sm:h-14 sm:w-14" />
-        <div className="min-w-0">
-          <p className="font-display truncate text-xs font-semibold tracking-[0.35em] text-evocore-red sm:text-sm">
-            EVO<span className="text-evocore-white">CORE</span>
+        <div className="min-w-0 flex flex-col items-center">
+          <p className="font-display truncate text-2xl font-[900] tracking-[0.15rem]">
+            <span className="text-evocore-gray">EVO</span><span className="text-evocore-red">CORE</span>
           </p>
-          <p className="font-label truncate text-[10px] font-medium uppercase tracking-widest text-evocore-white/80 sm:text-xs">
-           CONCRETE
+          <p className="-mt-1 w-fit max-w-full truncate border-b border-evocore-red pb-0.5 font-label text-[12px] font-bold uppercase tracking-[0.3rem] text-evocore-gray">
+            CONCRETE
           </p>
+          <p className="font-sans mt-1 text-[8px] font-medium uppercase tracking-wider text-evocore-gray">built strong. built to last.</p>
         </div>
       </div>
       <div className="flex shrink-0 items-center gap-2 sm:gap-3">

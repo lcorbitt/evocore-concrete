@@ -1,5 +1,5 @@
 export const ANIMATED_UNDERSCORE_WRAPPER_CLASS =
-  "relative mx-auto mt-5 w-full max-w-56 min-w-0 opacity-100 sm:mt-6 sm:max-w-72";
+  "relative mx-auto w-full max-w-56 min-w-0 opacity-100 sm:mt-6 sm:max-w-72";
 
 /** Clips horizontal motion/bleed; vertical padding for blur. */
 export const ANIMATED_UNDERSCORE_CLIP_CLASS =

@@ -14,7 +14,7 @@ export const ValueProps = () => (
   <section
     id={valueSectionId}
     aria-labelledby={`${valueSectionId}-heading`}
-    className="border-b border-evocore-grey/70 bg-evocore-black/60 py-16 sm:py-20"
+    className="border-b border-evocore-gray/70 bg-evocore-black/60 py-16 sm:py-20"
   >
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <h2

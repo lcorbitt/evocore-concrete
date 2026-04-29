@@ -7,7 +7,10 @@ export const HERO_IMAGE = {
   alt: "Professional worker hand-finishing a concrete surface with a trowel on a job site.",
 } as const;
 
-/** Vertical anchor between center (50%) and bottom (100%); nudges focal area slightly down. */
+/**
+ * Hero image focal point from the `md` breakpoint up (`object-position`).
+ * Below `md`, the hero image uses `object-bottom` (see HeroSection).
+ */
 export const HERO_IMAGE_OBJECT_POSITION = "center 56%";
 
 export const HERO_BODY_BEFORE_EMPHASIS =

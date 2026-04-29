@@ -7,7 +7,7 @@
 
 @layer base {
   * {
-    @apply border-evocore-grey/40;
+    @apply border-evocore-gray/40;
   }
   body {
     @apply min-h-full bg-evocore-texture text-evocore-white antialiased;
@@ -17,5 +17,16 @@
   }
   h1 {
     @apply font-display;
+  }
+}
+
+/*
+ * Industry has no 800 master (only 700, 900). Map extrabold → Black (900) when
+ * using the display stack. Montserrat: include 800 in `next/font` weights or
+ * `font-extrabold` falls back to 700 and matches bold.
+ */
+@layer utilities {
+  .font-display.font-extrabold {
+    font-weight: 900;
   }
 }

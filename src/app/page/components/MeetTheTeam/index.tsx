@@ -7,7 +7,7 @@ export const MeetTheTeam = () => (
   <section
     id={meetTeamSectionId}
     aria-labelledby={`${meetTeamSectionId}-heading`}
-    className="border-b border-evocore-grey/70 py-16 sm:py-20"
+    className="border-b border-evocore-gray/70 py-16 sm:py-20"
   >
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <h2
@@ -21,7 +21,7 @@ export const MeetTheTeam = () => (
         {TEAM_MEMBERS.map((member) => (
           <article
             key={member.name}
-            className="relative border border-evocore-grey/80 bg-evocore-steel/90 p-8 shadow-[inset_0_0_0_1px_rgba(204,0,0,0.15)]"
+            className="relative border border-evocore-gray/80 bg-evocore-steel/90 p-8 shadow-[inset_0_0_0_1px_rgba(204,0,0,0.15)]"
           >
             <div
               className="pointer-events-none absolute right-0 top-0 h-20 w-20 skew-x-[-20deg] bg-evocore-red/35"

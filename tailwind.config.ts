@@ -8,7 +8,7 @@ const config = {
         "evocore-red": "#cc0000",
         "evocore-white": "#ffffff",
         "evocore-black": "#000000",
-        "evocore-grey": "#333333",
+        "evocore-gray": "#a8abb3",
         "evocore-charcoal": "#141414",
         "evocore-steel": "#1e1e1e",
       },
@@ -30,6 +30,12 @@ const config = {
         ],
         label: [
           "var(--font-microgramma)",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        montserrat: [
+          "var(--font-montserrat)",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
