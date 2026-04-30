@@ -25,8 +25,35 @@
  * using the display stack. Montserrat: include 800 in `next/font` weights or
  * `font-extrabold` falls back to 700 and matches bold.
  */
+@layer components {
+  /**
+   * Global slow color transitions (e.g. hover). Native `button` matches here;
+   * add `color-fade` to links/other controls that use `buttonVariants()`.
+   */
+  :is(.color-fade, button) {
+    transition-property: color, background-color, border-color, text-decoration-color,
+      fill, stroke;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :is(.color-fade, button) {
+      transition-duration: 0.01ms;
+    }
+  }
+}
+
 @layer utilities {
   .font-display.font-extrabold {
     font-weight: 900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-root {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 }

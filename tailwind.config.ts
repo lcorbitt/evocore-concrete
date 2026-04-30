@@ -12,6 +12,21 @@ const config = {
         "evocore-charcoal": "#141414",
         "evocore-steel": "#1e1e1e",
       },
+      /*
+       * Numeric `font-*` weights (e.g. `font-600`) — Tailwind’s defaults use names
+       * (`font-semibold`, `font-bold`). Map 100–900 so numeric classes compile.
+       */
+      fontWeight: {
+        "100": "100",
+        "200": "200",
+        "300": "300",
+        "400": "400",
+        "500": "500",
+        "600": "600",
+        "700": "700",
+        "800": "800",
+        "900": "900",
+      },
       fontFamily: {
         sans: [
           "var(--font-arial-nova)",
@@ -59,9 +74,21 @@ const config = {
             transform: "translate3d(calc(-50% + 38%), -50%, 0)",
           },
         },
+        "reveal-enter": {
+          from: {
+            opacity: "0",
+            transform: "translateY(0.75rem)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "hero-headline-sheen": "hero-headline-sheen 7.5s ease-in-out infinite",
+        /** `<Reveal />` — fade + slight rise on mount. */
+        "reveal-enter": "reveal-enter 1.25s ease-in-out both",
       },
     },
   },

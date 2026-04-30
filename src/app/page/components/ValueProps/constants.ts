@@ -4,4 +4,4 @@ export const VALUE_PRIMARY_LINE =
 export const VALUE_DIRECT_LEAD = "DIRECT COMMUNICATION." as const;
 export const VALUE_DIRECT_REST = " NO MIDDLEMEN. NO SURPRISES." as const;
 
-export const SECTION_TITLE = "WHY EVOCORE" as const;
+export const SECTION_TITLE = "WHAT WE DO BEST" as const;

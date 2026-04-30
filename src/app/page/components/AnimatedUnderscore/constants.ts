@@ -3,7 +3,7 @@ export const ANIMATED_UNDERSCORE_WRAPPER_CLASS =
 
 /** Clips horizontal motion/bleed; vertical padding for blur. */
 export const ANIMATED_UNDERSCORE_CLIP_CLASS =
-  "relative w-full min-w-0 overflow-x-clip py-2";
+  "relative w-full min-w-0 overflow-x-clip";
 
 /** Single optical “bar” — one 2px line + blur room. */
 export const ANIMATED_UNDERSCORE_TRACK_CLASS = "relative h-6 w-full min-w-0 sm:h-7";
@@ -30,7 +30,11 @@ export const ANIMATED_UNDERSCORE_LASER_BAR_SHADOW =
  * `left-1/2` + symmetric keyframes (`calc(-50% ± …)`) keep motion equal left/right of center.
  */
 export const ANIMATED_UNDERSCORE_HOT_CRAWL_CLASS =
-  `pointer-events-none absolute left-1/2 top-1/2 z-[2] h-[2px] w-[34%] max-w-[5.25rem] rounded-full blur-[4px] ${MASK_FEATHER} motion-safe:animate-hero-headline-sheen [box-shadow:0_0_12px_rgba(255,255,255,0.55),0_0_22px_rgba(255,160,160,0.45)]`;
+  `pointer-events-none absolute left-1/2 top-1/2 z-[2] h-[2px] w-[34%] max-w-[5.25rem] rounded-full blur-[4px] ${MASK_FEATHER} motion-safe:animate-hero-headline-sheen`;
+
+/** Brighter white bloom so the crawl reads clearly on the red bar. */
+export const ANIMATED_UNDERSCORE_HOT_CRAWL_SHADOW =
+  "0 0 8px rgba(255,255,255,0.95), 0 0 18px rgba(255,255,255,0.75), 0 0 34px rgba(255,255,255,0.45), 0 0 48px rgba(255,255,255,0.22)";
 
 export const ANIMATED_UNDERSCORE_HOT_CRAWL_GRADIENT =
-  "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0.55) 32%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.55) 68%, rgba(255,255,255,0) 90%, rgba(255,255,255,0) 100%)";
+  "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 4%, rgba(255,255,255,0.55) 22%, rgba(255,255,255,0.92) 36%, rgb(255,255,255) 50%, rgba(255,255,255,0.92) 64%, rgba(255,255,255,0.55) 78%, rgba(255,255,255,0) 96%, rgba(255,255,255,0) 100%)";

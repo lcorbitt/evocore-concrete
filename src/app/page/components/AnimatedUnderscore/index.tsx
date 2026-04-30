@@ -4,6 +4,7 @@ import {
   ANIMATED_UNDERSCORE_CLIP_CLASS,
   ANIMATED_UNDERSCORE_HOT_CRAWL_CLASS,
   ANIMATED_UNDERSCORE_HOT_CRAWL_GRADIENT,
+  ANIMATED_UNDERSCORE_HOT_CRAWL_SHADOW,
   ANIMATED_UNDERSCORE_LASER_BAR_CLASS,
   ANIMATED_UNDERSCORE_LASER_BAR_GRADIENT,
   ANIMATED_UNDERSCORE_LASER_BAR_SHADOW,
@@ -30,7 +31,10 @@ export const AnimatedUnderscore = ({ className }: AnimatedUnderscoreProps) => (
         />
         <div
           className={ANIMATED_UNDERSCORE_HOT_CRAWL_CLASS}
-          style={{ background: ANIMATED_UNDERSCORE_HOT_CRAWL_GRADIENT }}
+          style={{
+            background: ANIMATED_UNDERSCORE_HOT_CRAWL_GRADIENT,
+            boxShadow: ANIMATED_UNDERSCORE_HOT_CRAWL_SHADOW,
+          }}
         />
       </div>
     </div>
