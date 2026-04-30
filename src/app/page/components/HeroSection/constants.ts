@@ -30,12 +30,16 @@ export const HERO_CTA_SECONDARY_LABEL = "Contact Us";
 export const HERO_CTA_PRIMARY_HREF = "/";
 export const HERO_CTA_SECONDARY_HREF = "/";
 
-/** Grows within `HOME_VIEWPORT_TOP_CLASS` below `sm` so nav + hero = one viewport. */
+/**
+ * Below `sm`: at least `100dvh` minus an approximate sticky nav stack so nav +
+ * hero fill one screen. Nav stays outside this `<header>` so `sticky` works for
+ * the whole document (sticky is bounded by its parent).
+ */
 export const HERO_HEADER_CLASS =
-  "relative flex flex-1 flex-col border-b-2 border-evocore-red/50 sm:flex-none";
+  "relative flex max-sm:min-h-[calc(100dvh-8.5rem)] flex-col border-b-2 border-evocore-red/50";
 
 export const HERO_SHELL_CLASS =
-  "relative flex w-full flex-1 flex-col items-center justify-center overflow-x-hidden px-4 py-12 sm:flex-none sm:min-h-[min(520px,85svh)] sm:px-6 md:px-8 sm:py-20 lg:min-h-[70vh]";
+  "relative flex w-full max-sm:flex-1 max-sm:min-h-0 flex-col items-center justify-center overflow-x-hidden px-4 py-12 sm:min-h-[min(520px,85svh)] sm:px-6 md:px-8 sm:py-20 lg:min-h-[70vh]";
 
 export const HERO_IMAGE_CLASS =
   "object-cover object-bottom md:[object-(--hero-object-desktop)]";

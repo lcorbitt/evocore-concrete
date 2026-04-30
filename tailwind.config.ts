@@ -100,9 +100,9 @@ const config = {
       animation: {
         "hero-headline-sheen": "hero-headline-sheen 7.5s ease-in-out infinite",
         /** `<Reveal />` — fade + slight rise on mount. */
-        "reveal-enter": "reveal-enter 1.25s ease-in-out both",
+        "reveal-enter": "reveal-enter .75s ease-in-out both",
         /** Hero “Call Now” — continuous sheen (respect `motion-reduce:animate-none`). */
-        "hero-cta-shimmer": "hero-cta-shimmer 7s linear infinite",
+        "hero-cta-shimmer": "hero-cta-shimmer 6s linear infinite",
       },
     },
   },
