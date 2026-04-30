@@ -75,7 +75,7 @@ export const HERO_HEADLINE_SECONDARY_CLASS =
 export const HERO_CREDENTIALS_ROW_CLASS = "flex items-center gap-2 ";
 
 export const HERO_CREDENTIAL_PILL_CLASS =
-  "flex items-center gap-1 bg-evocore-red/15 p-1 border border-evocore-red/30";
+  "flex justify-center items-center gap-1 bg-evocore-red/15 p-1 border border-evocore-red/30";
 
 export const HERO_CREDENTIAL_TEXT_CLASS =
   "font-montserrat text-[8px] font-medium tracking-[0.1rem] uppercase text-evocore-gray";

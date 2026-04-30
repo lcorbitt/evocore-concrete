@@ -1,53 +1,46 @@
-import { Handshake } from "lucide-react";
-import Image from "next/image";
-
-import {
-  SECTION_TITLE,
-  VALUE_DIRECT_LEAD,
-  VALUE_DIRECT_REST,
-  VALUE_PRIMARY_LINE,
-  VALUE_SECONDARY_LINE,
-} from "./constants";
-import { valueSectionId } from "./utils";
 import { Separator } from "@/components/ui/separator";
 
-export const ValueProps = () => (
-  <section
-    id={valueSectionId}
-    aria-labelledby={`${valueSectionId}-heading`}
-    className="border-b border-evocore-gray/50 bg-evocore-charcoal py-12 sm:py-20 px-4 sm:px-6 md:px-8"
-  >
-    <div className="mx-auto max-w-6xl p-6 sm:p-8 border border-evocore-gray/10">
-      <h2
-        id={`${valueSectionId}-heading`}
-        className="font-label text-xs font-bold uppercase tracking-[0.2rem] text-evocore-red mb-2"
-      >
-        {SECTION_TITLE}
-      </h2>
-      <div className="grid gap-4 lg:grid-cols-2 lg:gap-16">
-        <div className="flex flex-col">
-          <p className="font-display text-4xl font-black uppercase leading-snug tracking-tight text-evocore-white sm:text-3xl">
-            {VALUE_PRIMARY_LINE}
-          </p>
-          <p className="font-display text-4xl font-black uppercase leading-snug tracking-tight text-evocore-red sm:text-3xl -mt-4">
-            {VALUE_SECONDARY_LINE}
-          </p>
-        </div>
-        <Separator className="my-2 max-w-12 bg-evocore-red/80 data-horizontal:h-0.75" />
-        <p className="font-sans text-sm font-medium leading-6 tracking-wide text-evocore-gray">Five disciplines. One team. Zero compromises. We handle every job with the same level of care and attention to detail.</p>
-        <Image src="/glove.png" alt="Team working together" width={500} height={500} className="mt-4" />
-        <div className="flex gap-4 items-center">
-          <Handshake
-            className="mt-1 size-10 shrink-0 text-evocore-white"
-            strokeWidth={1.25}
-            aria-hidden
-          />
-          <p className="font-display text-xl font-bold uppercase leading-snug tracking-wide text-evocore-white sm:text-2xl">
-            <span className="text-evocore-white">{VALUE_DIRECT_LEAD}</span><br />
-            <span className="text-evocore-red">{VALUE_DIRECT_REST}</span>
-          </p>
+import { VALUE_PROP_CARDS, VALUE_PROPS_HEADING } from "./constants";
+import { valueSectionId } from "./utils";
+import { ValuePropCard } from "./ValuePropCard";
+import { Reveal } from "@/components/Reveal";
+
+const VALUE_PROP_ROW_LENGTH = 2;
+
+export const ValueProps = () => {
+  const topRow = VALUE_PROP_CARDS.slice(0, VALUE_PROP_ROW_LENGTH);
+  const bottomRow = VALUE_PROP_CARDS.slice(VALUE_PROP_ROW_LENGTH);
+
+  return (
+    <section
+      id={valueSectionId}
+      aria-labelledby={`${valueSectionId}-heading`}
+      className="relative border-b-2 border-evocore-red/50 bg-evocore-charcoal py-12 sm:py-16 md:py-20"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_85%_75%_at_50%_50%,rgb(204_0_0/0.1),rgb(204_0_0/0.05)_48%,transparent_72%)]"
+        aria-hidden
+      />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+        <h2 id={`${valueSectionId}-heading`} className="sr-only">
+          {VALUE_PROPS_HEADING}
+        </h2>
+        <div className="mx-auto max-w-4xl">
+          <Reveal>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-12 md:gap-x-14">
+              {topRow.map((card) => (
+                <ValuePropCard key={card.title} {...card} />
+              ))}
+            </div>
+            <Separator className="my-10 max-w-full bg-evocore-gray/35 data-horizontal:h-px sm:my-12 md:my-14" />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-12 md:gap-x-14">
+              {bottomRow.map((card) => (
+                <ValuePropCard key={card.title} {...card} />
+              ))}
+            </div>
+            </Reveal>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
