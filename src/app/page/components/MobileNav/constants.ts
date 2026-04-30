@@ -11,6 +11,7 @@ export const MOBILE_NAV_LINKS: readonly MobileNavLinkItem[] = [
   { href: "#value-propositions", label: "Why Evocore" },
   { href: "#meet-the-team", label: "Meet the team" },
   { href: "#services", label: "Services" },
+  { href: "#process", label: "Our process" },
   { href: "#trust", label: "Trust & licensing" },
   { href: "#contact", label: "Contact" },
 ];
