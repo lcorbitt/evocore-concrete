@@ -15,7 +15,7 @@ import type { HamburgerMorphProps } from "./types";
 import { mobileNavToggleId } from "./utils";
 
 const toggleButtonClass =
-  "relative z-[60] inline-flex size-10 shrink-0 items-center justify-center rounded-md border border-evocore-gray/60 bg-transparent text-evocore-white transition-colors hover:border-evocore-red hover:text-evocore-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-evocore-red";
+  "relative z-[60] inline-flex size-10 shrink-0 items-center justify-center rounded-md border border-evocore-gray/50 bg-transparent text-evocore-white transition-colors hover:border-evocore-red hover:text-evocore-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-evocore-red";
 
 const panelClass =
   "fixed inset-0 z-40 flex flex-col bg-evocore-black md:hidden motion-safe:transition-opacity motion-safe:duration-200";
@@ -27,7 +27,7 @@ const linkClass =
   "font-label border-b border-evocore-gray/50 py-4 text-base font-semibold uppercase tracking-widest text-evocore-white transition-colors hover:border-evocore-red hover:text-evocore-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-evocore-red";
 
 const barBase =
-  "absolute left-1/2 block h-0.5 w-5 -translate-x-1/2 rounded-full bg-evocore-gray transition-all duration-300 ease-in-out will-change-transform";
+  "absolute left-1/2 block h-0.5 w-5 -translate-x-1/2 rounded-full bg-evocore-gray/75 transition-all duration-300 ease-in-out will-change-transform";
 
 const HamburgerMorph = ({ isOpen }: HamburgerMorphProps) => (
   <span className="relative block h-5 w-6 shrink-0" aria-hidden>
