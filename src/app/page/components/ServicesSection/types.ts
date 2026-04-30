@@ -1,6 +1,6 @@
-import type { LucideIcon } from "lucide-react";
-
 export interface ServiceCard {
-  title: string;
-  Icon: LucideIcon;
+  icon: 'road' | 'grid' | 'sidewalk' | 'repair' | 'fence';
+  title: 'CONCRETE DRIVEWAYS' | 'PATIOS & WALKWAYS' | 'SIDEWALKS & STAIRS' | 'CONCRETE REPAIR' | 'FENCING SERVICES';
+  description: string;
+  href: string;
 }

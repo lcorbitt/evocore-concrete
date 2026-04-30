@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 
 import { Reveal } from "@/components/Reveal";
+import { SnowFlurryOverlay } from "@/components/SnowFlurryOverlay";
 
 import { HeroActionLinks } from "./HeroActionLinks";
 import { HeroBackdrop } from "./HeroBackdrop";
@@ -24,6 +25,7 @@ export const HeroSection = () => (
       }
     >
       <HeroBackdrop />
+      <SnowFlurryOverlay />
       <Reveal className={HERO_REVEAL_CLASS}>
         <HeroTrustRibbon />
         <HeroServiceAreas />

@@ -5,6 +5,30 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/**
+ * Closed quadrilateral in translate space (0 → v1 → v1+v2 → v2 → 0).
+ * Per-flake vectors are set via `--vx1`…`--vy2` on `.snow-flurry-overlay__flake-dot`.
+ */
+@keyframes snow-wander {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(var(--vx1), var(--vy1), 0);
+  }
+  50% {
+    transform: translate3d(
+      calc(var(--vx1) + var(--vx2)),
+      calc(var(--vy1) + var(--vy2)),
+      0
+    );
+  }
+  75% {
+    transform: translate3d(var(--vx2), var(--vy2), 0);
+  }
+}
+
 @layer base {
   * {
     @apply border-evocore-gray/40;
@@ -42,6 +66,37 @@
       transition-duration: 0.01ms;
     }
   }
+
+  /** One depth layer of sparse procedural flakes (see `SnowFlurryOverlay`). */
+  .snow-flurry-overlay__sheet {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .snow-flurry-overlay__sheet--a {
+    opacity: 0.3;
+  }
+
+  .snow-flurry-overlay__sheet--b {
+    opacity: 0.1;
+  }
+
+  .snow-flurry-overlay__flake-wrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .snow-flurry-overlay__flake-dot {
+    display: block;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.35);
+    animation-name: snow-wander;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
 }
 
 @layer utilities {
@@ -54,6 +109,10 @@
       animation: none !important;
       opacity: 1 !important;
       transform: none !important;
+    }
+
+    .snow-flurry-overlay {
+      display: none;
     }
   }
 }

@@ -8,7 +8,7 @@ import {
 } from "../constants";
 
 export const HeroBackdrop = () => (
-  <>
+  <div className="absolute inset-0 z-0" aria-hidden>
     <Image
       src={HERO_IMAGE.src}
       alt=""
@@ -20,5 +20,5 @@ export const HeroBackdrop = () => (
     />
     <div className={HERO_OVERLAY_SOLID_CLASS} aria-hidden />
     <div className={HERO_OVERLAY_GRADIENT_CLASS} aria-hidden />
-  </>
+  </div>
 );
