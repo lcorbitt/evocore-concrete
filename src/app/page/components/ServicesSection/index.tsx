@@ -77,9 +77,8 @@ export const ServicesSection = () => (
         {SERVICE_CARDS.map((card, index) => {
           const indexLabel = String(index + 1).padStart(2, "0");
           return (
-            <Reveal>
+            <Reveal key={card.title}>
               <li
-                key={card.title}
                 className="relative flex min-h-[280px] flex-col border border-white/50 bg-evocore-charcoal/75 p-6 text-left shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] gap-4"
               >
                 <span
