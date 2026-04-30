@@ -7,11 +7,15 @@ import { SiteNavbar } from "./page/components/SiteNavbar";
 import { TrustSignals } from "./page/components/TrustSignals";
 import { ValueProps } from "./page/components/ValueProps";
 
+import { HOME_VIEWPORT_TOP_CLASS } from "./page/constants";
+
 export default function Home() {
   return (
     <>
-      <SiteNavbar />
-      <HeroSection />
+      <div className={HOME_VIEWPORT_TOP_CLASS}>
+        <SiteNavbar />
+        <HeroSection />
+      </div>
       <main>
         <ValueProps />
         <ServicesSection />

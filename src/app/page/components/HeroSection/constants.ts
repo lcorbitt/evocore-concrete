@@ -30,11 +30,12 @@ export const HERO_CTA_SECONDARY_LABEL = "Contact Us";
 export const HERO_CTA_PRIMARY_HREF = "/";
 export const HERO_CTA_SECONDARY_HREF = "/";
 
+/** Grows within `HOME_VIEWPORT_TOP_CLASS` below `sm` so nav + hero = one viewport. */
 export const HERO_HEADER_CLASS =
-  "relative border-b-2 border-evocore-red/50";
+  "relative flex flex-1 flex-col border-b-2 border-evocore-red/50 sm:flex-none";
 
 export const HERO_SHELL_CLASS =
-  "relative flex min-h-[min(420px,82svh)] w-full flex-col items-center justify-center overflow-x-hidden px-4 sm:px-6 md:px-8 py-12 sm:min-h-[min(520px,85svh)] sm:py-20 lg:min-h-[70vh]";
+  "relative flex w-full flex-1 flex-col items-center justify-center overflow-x-hidden px-4 py-12 sm:flex-none sm:min-h-[min(520px,85svh)] sm:px-6 md:px-8 sm:py-20 lg:min-h-[70vh]";
 
 export const HERO_IMAGE_CLASS =
   "object-cover object-bottom md:[object-(--hero-object-desktop)]";
