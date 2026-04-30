@@ -19,7 +19,7 @@ export const ServicesSection = () => (
   <section
     id={servicesSectionId}
     aria-labelledby={`${serviceHighlightsRegionId}-heading ${servicesSectionId}-heading`}
-    className="border-b border-evocore-gray/70 bg-evocore-black py-12 sm:py-16 md:py-20"
+    className="border-b-2 border-evocore-red/50 bg-evocore-black py-12 sm:py-16 md:py-20"
   >
     <div
       id={serviceHighlightsRegionId}
@@ -76,7 +76,7 @@ export const ServicesSection = () => (
           return (
             <li
               key={card.title}
-              className="relative flex min-h-[280px] flex-col border border-white/50 bg-transparent p-6 text-left shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
+              className="relative flex min-h-[280px] flex-col border border-white/50 bg-evocore-charcoal/75 p-6 text-left shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
             >
               <span
                 className="pointer-events-none absolute right-5 top-5 font-display text-4xl font-black leading-none text-evocore-red/30 select-none sm:right-5 sm:top-4 sm:text-6xl"
