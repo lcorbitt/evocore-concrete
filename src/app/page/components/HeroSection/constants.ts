@@ -34,13 +34,13 @@ export const HERO_HEADER_CLASS =
   "relative border-b-2 border-evocore-red/50";
 
 export const HERO_SHELL_CLASS =
-  "relative flex min-h-[min(420px,82svh)] w-full flex-col items-center justify-center px-4 py-12 sm:min-h-[min(520px,85svh)] sm:px-6 sm:py-20 lg:min-h-[70vh]";
+  "relative flex min-h-[min(420px,82svh)] w-full flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:min-h-[min(520px,85svh)] sm:py-20 lg:min-h-[70vh]";
 
 export const HERO_IMAGE_CLASS =
   "object-cover object-bottom md:[object-(--hero-object-desktop)]";
 
 export const HERO_OVERLAY_SOLID_CLASS =
-  "pointer-events-none absolute inset-0 bg-evocore-black/40";
+  "pointer-events-none absolute inset-0 bg-evocore-red/15";
 
 export const HERO_OVERLAY_GRADIENT_CLASS =
   "pointer-events-none absolute inset-0 bg-linear-to-b from-black/55 via-black/40 to-black/90";
@@ -81,7 +81,7 @@ export const HERO_CREDENTIAL_TEXT_CLASS =
   "font-montserrat text-[8px] font-medium tracking-[0.1rem] uppercase text-evocore-gray";
 
 export const HERO_BODY_CLASS =
-  "font-label max-w-2xl text-sm lg:text-base font-medium leading-relaxed text-evocore-white";
+  "font-sans max-w-2xl text-sm lg:text-base font-medium tracking-wide text-evocore-white/80";
 
 export const HERO_BODY_EMPHASIS_CLASS = "font-bold text-evocore-red";
 
