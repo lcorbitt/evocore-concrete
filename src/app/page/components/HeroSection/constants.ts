@@ -78,7 +78,7 @@ export const HERO_CREDENTIAL_PILL_CLASS =
   "flex justify-center items-center gap-1 bg-evocore-red/15 p-1 border border-evocore-red/30";
 
 export const HERO_CREDENTIAL_TEXT_CLASS =
-  "font-montserrat text-[8px] font-medium tracking-[0.1rem] uppercase text-evocore-gray";
+  "font-montserrat text-[8px] -mb-0.5 font-medium tracking-[0.1rem] uppercase text-evocore-gray";
 
 export const HERO_BODY_CLASS =
   "font-sans max-w-2xl text-sm lg:text-base font-bold tracking-wide text-evocore-white/80";
