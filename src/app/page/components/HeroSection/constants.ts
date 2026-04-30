@@ -93,7 +93,7 @@ export const HERO_BODY_EMPHASIS_CLASS = "font-bold text-evocore-red";
 export const HERO_CTA_ROW_CLASS = "flex items-center gap-4";
 
 export const HERO_CTA_PRIMARY_LINK_CLASS =
-  "color-fade uppercase relative overflow-hidden px-6 py-3 bg-evocore-red text-evocore-white text-xs font-bold font-montserrat inline-flex items-center justify-center shadow-hero-cta-pop transition-[box-shadow,transform] duration-200 ease-out hover:bg-evocore-red/90 hover:shadow-hero-cta-pop-hover hover:-translate-y-px motion-reduce:hover:translate-y-0 active:translate-y-0 active:shadow-hero-cta-pop tracking-widest focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/35";
+  "color-fade uppercase relative overflow-hidden px-6 py-5 bg-evocore-red text-evocore-white text-xs font-bold font-montserrat inline-flex items-center justify-center shadow-hero-cta-pop transition-[box-shadow,transform] duration-200 ease-out hover:bg-evocore-red/90 hover:shadow-hero-cta-pop-hover hover:-translate-y-px motion-reduce:hover:translate-y-0 active:translate-y-0 active:shadow-hero-cta-pop tracking-widest focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/35";
 
 /** Sheen layer behind label/icon; loop + reduced-motion handled in JSX. */
 export const HERO_CTA_PRIMARY_SHIMMER_CLASS =
@@ -103,7 +103,7 @@ export const HERO_CTA_PRIMARY_CONTENT_CLASS =
   "relative z-10 inline-flex items-center gap-3";
 
 export const HERO_CTA_SECONDARY_LINK_CLASS =
-  "color-fade uppercase gap-3 px-6 py-3 bg-transparent border border-evocore-gray/50 text-evocore-white text-xs font-bold font-montserrat inline-flex items-center tracking-widest hover:bg-evocore-gray/20 focus-visible:ring-evocore-red/60";
+  "color-fade uppercase gap-3 px-6 py-5 bg-transparent border border-evocore-gray/50 text-evocore-white text-xs font-bold font-montserrat inline-flex items-center tracking-widest hover:bg-evocore-gray/20 focus-visible:ring-evocore-red/60";
 
 export const HERO_CTA_PRIMARY_ICON_CLASS = "size-4 inline-block ml-2 stroke-2";
 
