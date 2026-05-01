@@ -96,6 +96,15 @@ const config = {
           "0%": { backgroundPosition: "200% 0" },
           "100%": { backgroundPosition: "-200% 0" },
         },
+        /** Hero “Call Now” — soft wiggle; start time controlled in `useHeroActionLinks`. */
+        "hero-cta-tremble": {
+          "0%, 100%": { transform: "translate3d(0, 0, 0) rotate(0deg)" },
+          "15%": { transform: "translate3d(0.65px, -0.55px, 0) rotate(-0.42deg)" },
+          "30%": { transform: "translate3d(-0.6px, 0.55px, 0) rotate(0.35deg)" },
+          "45%": { transform: "translate3d(0.55px, 0.45px, 0) rotate(-0.22deg)" },
+          "60%": { transform: "translate3d(-0.45px, -0.4px, 0) rotate(0.18deg)" },
+          "75%": { transform: "translate3d(0.35px, -0.3px, 0) rotate(-0.12deg)" },
+        },
       },
       animation: {
         "hero-headline-sheen": "hero-headline-sheen 7.5s ease-in-out infinite",
@@ -103,6 +112,8 @@ const config = {
         "reveal-enter": "reveal-enter .75s ease-in-out both",
         /** Hero “Call Now” — continuous sheen (respect `motion-reduce:animate-none`). */
         "hero-cta-shimmer": "hero-cta-shimmer 6s linear infinite",
+        /** Duration only — delay is applied when the class is toggled on intersect. */
+        "hero-cta-tremble": "hero-cta-tremble 1.05s ease-in-out 1 both",
       },
     },
   },

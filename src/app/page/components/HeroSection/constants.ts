@@ -92,8 +92,18 @@ export const HERO_BODY_EMPHASIS_CLASS = "font-bold text-evocore-red";
 
 export const HERO_CTA_ROW_CLASS = "flex items-center gap-4";
 
+/** Keep aligned with `theme.animation.reveal-enter` in `tailwind.config.ts`. */
+export const HERO_REVEAL_ENTER_DURATION_MS = 750;
+
+/**
+ * After the CTA intersects, wait this long before applying `animate-hero-cta-tremble`
+ * so the parent `<Reveal />` opacity motion has finished (tremble is mount-based in CSS).
+ */
+export const HERO_CTA_TREMBLE_DELAY_AFTER_INTERSECT_MS =
+  HERO_REVEAL_ENTER_DURATION_MS + 220;
+
 export const HERO_CTA_PRIMARY_LINK_CLASS =
-  "color-fade uppercase relative overflow-hidden px-6 py-5 bg-evocore-red text-evocore-white text-xs font-bold font-montserrat inline-flex items-center justify-center shadow-hero-cta-pop transition-[box-shadow,transform] duration-200 ease-out hover:bg-evocore-red/90 hover:shadow-hero-cta-pop-hover hover:-translate-y-px motion-reduce:hover:translate-y-0 active:translate-y-0 active:shadow-hero-cta-pop tracking-widest focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/35";
+  "color-fade motion-reduce:animate-none uppercase relative overflow-hidden px-6 py-5 bg-evocore-red text-evocore-white text-xs font-bold font-montserrat inline-flex items-center justify-center shadow-hero-cta-pop transition-[box-shadow,transform] duration-200 ease-out hover:bg-evocore-red/90 hover:shadow-hero-cta-pop-hover hover:-translate-y-px motion-reduce:hover:translate-y-0 active:translate-y-0 active:shadow-hero-cta-pop tracking-widest focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/35";
 
 /** Sheen layer behind label/icon; loop + reduced-motion handled in JSX. */
 export const HERO_CTA_PRIMARY_SHIMMER_CLASS =

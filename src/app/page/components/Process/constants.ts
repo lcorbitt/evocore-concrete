@@ -1,33 +1,34 @@
-import type { ProcessStep } from "./types";
+import type { ProcessCardData } from "./types";
 
-export const PROCESS_EYEBROW = "OUR PROCESS" as const;
+export const PROCESS_EYEBROW = "HOW IT WORKS" as const;
 
 export const PROCESS_HEADLINE_PRIMARY = "CLEAR STEPS" as const;
 
 export const PROCESS_HEADLINE_SECONDARY = "NO GUESSWORK." as const;
 
-export const PROCESS_INTRO =
-  "Every job follows the same rhythm—so you always know who is on site, what happens next, and when we wrap." as const;
-
-export const PROCESS_STEPS: readonly ProcessStep[] = [
+export const PROCESS_CARDS: readonly ProcessCardData[] = [
   {
-    title: "DISCOVERY CALL",
+    icon: "phone",
+    title: "Call or book online",
     description:
-      "We align on goals, access, and timing—then outline what a good outcome looks like for your property.",
+      "A real person answers every call — no hold music, no call centers. Tell us what's wrong, pick your window, and you're on the schedule. Same-day slots available most days.",
+    timeLabel: "~5 min",
+    timeCaption: "To get booked",
   },
   {
-    title: "ON-SITE ASSESSMENT",
+    icon: "calendar",
+    title: "We show up on time",
     description:
-      "Measurements, photos, and a straight conversation about scope, drainage, and any repair work up front.",
+      "Crew arrives in branded trucks with the right tools and materials. We walk the site together, confirm the scope, and get to work — no surprises, no runaround.",
+    timeLabel: "~Same day",
+    timeCaption: "Most service calls",
   },
   {
-    title: "PROPOSAL & SCHEDULE",
+    icon: "check-circle",
+    title: "Done right, cleaned up",
     description:
-      "Transparent numbers, material choices, and a start window that fits your calendar—no middlemen.",
-  },
-  {
-    title: "BUILD & CLOSEOUT",
-    description:
-      "Crew on site through completion, daily communication, cleanup, and a final walkthrough before we sign off.",
+      "Quality work through completion, then we haul debris, sweep the area, and walk you through what we did. You sign off only when you're satisfied.",
+    timeLabel: "Job done",
+    timeCaption: "Walkthrough & warranty notes",
   },
 ];

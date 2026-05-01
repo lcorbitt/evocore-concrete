@@ -1,20 +1,25 @@
 import { Separator } from "@/components/ui/separator";
 
 import {
+  PROCESS_CARDS,
   PROCESS_EYEBROW,
   PROCESS_HEADLINE_PRIMARY,
   PROCESS_HEADLINE_SECONDARY,
-  PROCESS_INTRO,
-  PROCESS_STEPS,
 } from "./constants";
+import { ProcessCard } from "./ProcessCard";
 import { processSectionId } from "./utils";
+import { Reveal } from "@/components/Reveal";
 
 export const Process = () => (
   <section
     id={processSectionId}
     aria-labelledby={`${processSectionId}-heading`}
-    className="border-b-2 border-evocore-red/50 bg-evocore-charcoal py-12 text-center sm:py-16 md:py-20"
+    className="relative border-b-2 border-evocore-red/50 bg-evocore-charcoal py-12 text-center sm:py-16 md:py-20"
   >
+    <div
+      className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_85%_75%_at_50%_50%,rgb(204_0_0/0.1),rgb(204_0_0/0.05)_48%,transparent_72%)]"
+      aria-hidden
+    />
     <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
       <h2
         id={`${processSectionId}-heading`}
@@ -31,34 +36,15 @@ export const Process = () => (
         </p>
       </div>
       <Separator className="mx-auto my-8 max-w-12 bg-evocore-red/80 data-horizontal:h-0.75" />
-      <p className="mx-auto max-w-2xl font-sans text-sm font-medium leading-relaxed tracking-wide text-evocore-gray">
-        {PROCESS_INTRO}
-      </p>
 
-      <ol className="mx-auto mt-12 grid max-w-5xl justify-items-stretch gap-10 sm:gap-8 md:grid-cols-2 md:gap-x-6 lg:grid-cols-4 lg:gap-6">
-        {PROCESS_STEPS.map((step, index) => {
-          const stepNumber = String(index + 1).padStart(2, "0");
-          return (
-            <li
-              key={step.title}
-              className="relative flex w-full flex-col items-center border border-evocore-gray/30 bg-evocore-steel/60 px-6 pb-6 pt-8 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04)]"
-            >
-              <span
-                className="mb-3 font-display text-4xl font-black leading-none text-evocore-red/35 select-none sm:text-5xl"
-                aria-hidden
-              >
-                {stepNumber}
-              </span>
-              <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-wide text-evocore-white">
-                {step.title}
-              </h3>
-              <Separator className="mx-auto my-4 max-w-10 bg-evocore-red/80 data-horizontal:h-0.75" />
-              <p className="font-sans text-sm leading-relaxed text-evocore-white/85">
-                {step.description}
-              </p>
+      <ol className="mx-auto mt-12 flex list-none flex-col items-center gap-12 md:grid md:max-w-none md:grid-cols-3 md:items-stretch md:gap-8 md:justify-items-center lg:gap-10">
+        {PROCESS_CARDS.map((card, index) => (
+          <Reveal key={card.title}>
+            <li key={card.title} className="flex w-full justify-center md:block md:w-auto">
+              <ProcessCard stepNumber={index + 1} {...card} />
             </li>
-          );
-        })}
+          </Reveal>
+        ))}
       </ol>
     </div>
   </section>
