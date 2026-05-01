@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, FenceIcon, BrickWallIcon, FootprintsIcon, Handshake, HouseIcon, RoadIcon, Wrench } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, FenceIcon, BrickWallIcon, FootprintsIcon, Handshake, HouseIcon, Wrench } from "lucide-react";
 
-import { Separator } from "@/components/ui/separator";
+import { DeferredPublicImage } from "@/components/DeferredPublicImage";
 import { Reveal } from "@/components/Reveal";
+import { Separator } from "@/components/ui/separator";
+
 import {
   SERVICE_CARDS,
   SERVICE_HIGHLIGHT_BODY,
@@ -11,6 +12,8 @@ import {
   SERVICE_HIGHLIGHT_DIRECT_REST,
   SERVICE_HIGHLIGHT_HEADLINE_PRIMARY,
   SERVICE_HIGHLIGHT_HEADLINE_SECONDARY,
+  SERVICE_HIGHLIGHT_IMAGE,
+  SERVICE_HIGHLIGHT_IMAGE_SIZES,
   SERVICE_HIGHLIGHTS_EYEBROW,
 } from "./constants";
 import { serviceHighlightsRegionId, servicesSectionId } from "./utils";
@@ -37,10 +40,10 @@ export const ServicesSection = () => (
             </h2>
             <div className="grid gap-4 lg:grid-cols-2 lg:gap-16">
               <div className="flex flex-col">
-                <p className="font-display text-4xl font-medium uppercase leading-snug tracking-tight text-evocore-white sm:text-3xl">
+                <p className="font-display text-4xl font-bold uppercase leading-snug tracking-tight text-evocore-white sm:text-3xl">
                   {SERVICE_HIGHLIGHT_HEADLINE_PRIMARY}
                 </p>
-                <p className="font-display text-4xl font-medium uppercase leading-snug tracking-tight text-evocore-red sm:text-3xl -mt-4">
+                <p className="font-display text-4xl font-bold uppercase leading-snug tracking-tight text-evocore-red sm:text-3xl -mt-4">
                   {SERVICE_HIGHLIGHT_HEADLINE_SECONDARY}
                 </p>
               </div>
@@ -48,12 +51,11 @@ export const ServicesSection = () => (
               <p className="font-sans text-sm font-medium leading-6 tracking-wide text-evocore-gray">
                 {SERVICE_HIGHLIGHT_BODY}
               </p>
-              <Image
-                src="/glove.png"
-                alt="Concrete crew on site with protective gloves and tools"
-                width={500}
-                height={500}
-                className="mt-4"
+              <DeferredPublicImage
+                src={SERVICE_HIGHLIGHT_IMAGE.src}
+                alt={SERVICE_HIGHLIGHT_IMAGE.alt}
+                sizes={SERVICE_HIGHLIGHT_IMAGE_SIZES}
+                className="relative mt-4 aspect-square w-full max-w-[min(100%,500px)] justify-self-start lg:max-w-none"
               />
               <div className="flex gap-4 items-center mt-4">
                 <Handshake
@@ -94,7 +96,7 @@ export const ServicesSection = () => (
                   {card.icon === 'wrench' && <Wrench className="size-6 text-evocore-red" aria-hidden />}
                   {card.icon === 'fence' && <FenceIcon className="size-6 text-evocore-red" aria-hidden />}
                 </div>
-                <h3 className="relative z-10 font-display text-2xl font-bold uppercase leading-tight tracking-wide text-evocore-white sm:text-3xl">
+                <h3 className="relative z-10 font-display text-2xl font-medium uppercase leading-tight tracking-wide text-evocore-white sm:text-3xl">
                   {card.title}
                 </h3>
                 <Separator className="relative z-10 my-3 w-12 max-w-12 shrink-0 self-start bg-evocore-red/80 data-horizontal:h-1" />

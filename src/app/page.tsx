@@ -1,6 +1,9 @@
 import { ContactSection } from "./page/components/ContactSection";
 import { HeroSection } from "./page/components/HeroSection";
 import { MeetTheTeam } from "./page/components/MeetTheTeam";
+import { Portfolio } from "./page/components/Portfolio";
+import { Reviews } from "./page/components/Reviews";
+import { ServiceAreaMap } from "./page/components/ServiceAreaMap";
 import { Process } from "./page/components/Process";
 import { ServicesSection } from "./page/components/ServicesSection";
 import { SiteFooter } from "./page/components/SiteFooter";
@@ -17,6 +20,9 @@ export default function Home() {
         <ValueProps />
         <ServicesSection />
         <Process />
+        <Portfolio />
+        <Reviews />
+        <ServiceAreaMap />
         <MeetTheTeam />
         <TrustSignals />
         <ContactSection />

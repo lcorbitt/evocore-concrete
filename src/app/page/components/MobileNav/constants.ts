@@ -12,6 +12,9 @@ export const MOBILE_NAV_LINKS: readonly MobileNavLinkItem[] = [
   { href: "#meet-the-team", label: "Meet the team" },
   { href: "#services", label: "Services" },
   { href: "#process", label: "Our process" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#service-area-map", label: "Service area" },
   { href: "#trust", label: "Trust & licensing" },
   { href: "#contact", label: "Contact" },
 ];

@@ -30,10 +30,10 @@ export const Process = () => (
         {PROCESS_EYEBROW}
       </h2>
       <div className="mx-auto mt-4 max-w-3xl">
-        <p className="font-display text-3xl font-medium uppercase leading-snug tracking-tight text-evocore-white sm:text-4xl">
+        <p className="font-display text-3xl font-bold uppercase leading-snug tracking-tight text-evocore-white sm:text-4xl">
           {PROCESS_HEADLINE_PRIMARY}
         </p>
-        <p className="font-display text-3xl font-medium uppercase leading-snug tracking-tight text-evocore-red sm:text-4xl">
+        <p className="font-display text-3xl font-bold uppercase leading-snug tracking-tight text-evocore-red sm:text-4xl">
           {PROCESS_HEADLINE_SECONDARY}
         </p>
       </div>

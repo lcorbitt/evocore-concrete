@@ -1,5 +1,4 @@
 import type { ServiceCard } from "./types";
-import { RoadIcon } from "lucide-react";
 
 /** Intro region above the service cards (“service highlights” framing). */
 export const SERVICE_HIGHLIGHTS_EYEBROW = "WHAT WE DO" as const;
@@ -10,6 +9,15 @@ export const SERVICE_HIGHLIGHT_BODY =
 export const SERVICE_HIGHLIGHT_DIRECT_LEAD =
   "DIRECT COMMUNICATION. NO MIDDLEMEN." as const;
 export const SERVICE_HIGHLIGHT_DIRECT_REST = "NO SURPRISES." as const;
+
+export const SERVICE_HIGHLIGHT_IMAGE = {
+  src: "/glove.png",
+  alt: "Concrete crew on site with protective gloves and tools",
+} as const;
+
+/** `sizes` for highlight grid (`lg:grid-cols-2`). */
+export const SERVICE_HIGHLIGHT_IMAGE_SIZES =
+  "(max-width: 1024px) 100vw, 50vw" as const;
 
 export const SERVICE_CARDS: readonly ServiceCard[] = [
   {

@@ -18,12 +18,3 @@ export const PROCESS_CARD_RULE_CLASS =
 
 export const PROCESS_CARD_BODY_CLASS =
   "mt-5 max-w-[22rem] font-sans text-sm font-medium leading-relaxed text-evocore-gray";
-
-export const PROCESS_CARD_TIME_BADGE_CLASS =
-  "mt-8 flex w-full max-w-[16rem] items-center justify-center gap-2 rounded border border-evocore-red/55 bg-evocore-charcoal/40 px-4 py-3";
-
-export const PROCESS_CARD_TIME_LABEL_CLASS =
-  "font-montserrat text-sm font-bold uppercase tracking-wide text-evocore-red";
-
-export const PROCESS_CARD_TIME_CAPTION_CLASS =
-  "font-montserrat text-[11px] font-medium uppercase tracking-wider text-evocore-gray";

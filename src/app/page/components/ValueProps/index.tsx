@@ -1,9 +1,9 @@
+import { Reveal } from "@/components/Reveal";
 import { Separator } from "@/components/ui/separator";
 
 import { VALUE_PROP_CARDS, VALUE_PROPS_HEADING } from "./constants";
 import { valueSectionId } from "./utils";
 import { ValuePropCard } from "./ValuePropCard";
-import { Reveal } from "@/components/Reveal";
 
 const VALUE_PROP_ROW_LENGTH = 2;
 
@@ -38,7 +38,7 @@ export const ValueProps = () => {
                 <ValuePropCard key={card.title} {...card} />
               ))}
             </div>
-            </Reveal>
+          </Reveal>
         </div>
       </div>
     </section>
