@@ -1,6 +1,9 @@
+import { CallNowPrimaryCta } from "@/components/CallNowPrimaryCta";
+import { Reveal } from "@/components/Reveal";
 import { Separator } from "@/components/ui/separator";
 
 import {
+  PROCESS_CALL_NOW_HREF,
   PROCESS_CARDS,
   PROCESS_EYEBROW,
   PROCESS_HEADLINE_PRIMARY,
@@ -8,13 +11,12 @@ import {
 } from "./constants";
 import { ProcessCard } from "./ProcessCard";
 import { processSectionId } from "./utils";
-import { Reveal } from "@/components/Reveal";
 
 export const Process = () => (
   <section
     id={processSectionId}
     aria-labelledby={`${processSectionId}-heading`}
-    className="relative border-b-2 border-evocore-red/50 bg-evocore-charcoal py-12 text-center sm:py-16 md:py-20"
+    className="relative border-b-2 border-evocore-red/50 bg-evocore-charcoal py-12 text-center sm:py-16 md:py-20 flex flex-col items-center justify-center gap-12"
   >
     <div
       className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_85%_75%_at_50%_50%,rgb(204_0_0/0.1),rgb(204_0_0/0.05)_48%,transparent_72%)]"
@@ -47,5 +49,6 @@ export const Process = () => (
         ))}
       </ol>
     </div>
+    <CallNowPrimaryCta href={PROCESS_CALL_NOW_HREF} />
   </section>
-);
+); 

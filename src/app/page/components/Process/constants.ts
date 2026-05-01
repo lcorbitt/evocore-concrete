@@ -1,5 +1,7 @@
 import type { ProcessCardData } from "./types";
 
+export const PROCESS_CALL_NOW_HREF = "/process" as const;
+
 export const PROCESS_EYEBROW = "HOW IT WORKS" as const;
 
 export const PROCESS_HEADLINE_PRIMARY = "CLEAR STEPS" as const;

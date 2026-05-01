@@ -39,10 +39,6 @@ export const ProcessCard = ({
       <h3 className={PROCESS_CARD_TITLE_CLASS}>{title}</h3>
       <div className={PROCESS_CARD_RULE_CLASS} role="presentation" />
       <p className={PROCESS_CARD_BODY_CLASS}>{description}</p>
-      <div className={PROCESS_CARD_TIME_BADGE_CLASS}>
-        <span className={PROCESS_CARD_TIME_LABEL_CLASS}>{timeLabel}</span>
-        <span className={PROCESS_CARD_TIME_CAPTION_CLASS}>{timeCaption}</span>
-      </div>
     </article>
   );
 };

@@ -7,19 +7,17 @@ import { cn } from "@/lib/utils";
 import {
   HERO_CTA_PRIMARY_LINK_CLASS,
   HERO_CTA_TREMBLE_DELAY_AFTER_INTERSECT_MS,
-} from "../../constants";
+} from "@/app/page/components/HeroSection/constants";
 
 /**
- * Defers the primary CTA tremble until after intersect + reveal fade: tremble
- * keyframes are tied to mount time in CSS, but the CTA lives inside `<Reveal />`
- * and is invisible until intersection, so we start the animation from JS.
+ * Defers tremble until after intersect + parent reveal fade (see hero CTA).
  */
-export const useHeroActionLinks = () => {
-  const primaryCtaRef = useRef<HTMLAnchorElement | null>(null);
+export const useCallNowPrimaryCtaTremble = () => {
+  const ctaRef = useRef<HTMLAnchorElement | null>(null);
   const [playTremble, setPlayTremble] = useState(false);
 
   useEffect(() => {
-    const el = primaryCtaRef.current;
+    const el = ctaRef.current;
     if (!el) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -46,10 +44,7 @@ export const useHeroActionLinks = () => {
   }, []);
 
   return {
-    primaryCtaRef,
-    primaryCtaClassName: cn(
-      HERO_CTA_PRIMARY_LINK_CLASS,
-      playTremble && "animate-hero-cta-tremble",
-    ),
+    ctaRef,
+    className: cn(HERO_CTA_PRIMARY_LINK_CLASS, playTremble && "animate-hero-cta-tremble"),
   };
 };
